@@ -16,7 +16,20 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Laravel 5');
     }
-    // creating Route
+    // // creating Route
+    // /**
+    //  * A Product List test example.
+    //  *
+    //  * @return void
+    //  */
+    // public function testProductsList()
+    // {
+    //     $this->get(route('products'))
+    //          ->assertResponseOk();
+    // }
+    // //
+
+    // creating Controller
     /**
      * A Product List test example.
      *
@@ -24,7 +37,7 @@ class ExampleTest extends TestCase
      */
     public function testProductsList()
     {
-        $this->get(route('products'))
+        $this->get(route('api.products.index'))
              ->assertResponseOk();
     }
     // 
