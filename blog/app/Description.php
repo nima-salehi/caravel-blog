@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Description extends Model
 {
     //creating model
-    return $query->where('product_id', $productId);
-    // 
+    /**
+     * Get the product record associated with the description.
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+    //
 }

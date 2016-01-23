@@ -29,3 +29,15 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+// creating route
+// http://localhost:8000/products
+// Route::get('products',function(){
+//   return App\Product::all();
+// });
+// http://localhost:8000/api/products
+Route::group(['prefix'=>'api'],function(){
+  Route::get('products',['as'=>'products', function(){
+    return App\Product::all();
+  }]);
+});
+//
