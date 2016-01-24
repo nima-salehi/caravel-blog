@@ -15,4 +15,15 @@ class Description extends Model
         return $this->belongsTo(Product::class);
     }
     //
+
+    // reading data via api
+    //public function scopeOfProduct()
+    // {
+    //   return $query;
+    // }
+    public function scopeOfProduct($query,$productId)
+    {
+      return $query->where('product_id',$productId);
+    }
+
 }
